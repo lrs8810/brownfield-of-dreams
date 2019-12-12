@@ -35,4 +35,11 @@ class UserFacade
       end
     end
   end
+
+  def follower_followings
+    {
+      'Followers' => followers,
+      'Followings' => followings
+    }
+  end
 end
