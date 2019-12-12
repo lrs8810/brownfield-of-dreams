@@ -22,7 +22,7 @@ RSpec.describe 'As a user from my dashboard' do
 
     visit dashboard_path
 
-    within ".follower-#{follower_1.handle}" do
+    within ".followers-#{follower_1.handle}" do
       click_button 'Add friend'
     end
 
@@ -33,7 +33,7 @@ RSpec.describe 'As a user from my dashboard' do
     user.reload
     visit dashboard_path
 
-    within ".follower-#{follower_1.handle}" do
+    within ".followers-#{follower_1.handle}" do
       expect(page).to_not have_button('Add friend')
     end
 
